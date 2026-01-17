@@ -16,7 +16,7 @@
                 <div class="card bg-base-100 shadow">
                     <figure>
                         <img src="{{ $event->gambar
-                            ? asset('storage/' . $event->gambar)
+                            ? asset('images/events/' . $event->gambar)
                             : 'https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp' }}"
                             alt="{{ $event->judul }}" class="w-full h-96 object-cover" />
                     </figure>
@@ -46,6 +46,7 @@
                         <h3 class="text-xl font-bold">Pilih Tiket</h3>
 
                         <div class="mt-4 space-y-4">
+                            
                             @forelse($event->tikets as $tiket)
                                 <div class="card card-side shadow-sm p-4 items-center">
                                     <div class="flex-1">
